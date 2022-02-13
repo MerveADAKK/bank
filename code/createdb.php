@@ -22,7 +22,7 @@
    if ($conn->query($sql) === TRUE) {
     header('Location:createbasarili.php');
    } else {
-   echo "Eros: " . $sql . "<br>" . $conn->error;
+   echo "PLEASE MAKE SURE YOU ENTER THE INFORMATION CORRECTLY!";
    }
    mysqli_close($conn);
 

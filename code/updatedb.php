@@ -23,7 +23,7 @@ die("Connection failed: " . mysqli_connect_error());
      $birthdate =$result['birthdate'];
  
 
-  
+
      header('Location:updatee.php?name='.$name.'&surname='.$surname.'&gender='.$gender.'&birthdate='.$birthdate.'&userId='.$userId);
 
 

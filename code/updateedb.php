@@ -20,13 +20,10 @@ die("Connection failed: " . mysqli_connect_error());
      $sql ="UPDATE user SET name='".$name."', surname='".$surname."', gender='".$gender."', birthdate='".$birthdate."' WHERE userId= '".$userId."';";
      
      if ($conn->query($sql) === TRUE) {
-
-
-
-        header('Location:updatebasarili.php');
-      } else {
-        echo "Error updating record: " . $conn->error;
-      }
+      header('Location:updatebasarili.php');
+    } else {
+      echo "PLEASE MAKE SURE YOU ENTER THE INFORMATION CORRECTLY!";
+    }
 
 
 mysqli_close($conn);

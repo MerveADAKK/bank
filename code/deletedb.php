@@ -13,14 +13,12 @@ die("Connection failed: " . mysqli_connect_error());
 }
 
 $sql = "DELETE FROM user WHERE userId='".$userId."';";
-
-
 if ($conn->query($sql) === TRUE) {
- header('deletebasarili.php');
+ header('Location:deletebasarili.php');
 } else {
-echo "Eros: " . $sql . "<br>" . $conn->error;
+echo "THIS ID DOES NOT HAVE A USER. ENTER ANOTHER ID.";
 }
-mysqli_close($conn);
 
+mysqli_close($conn);
 ?>
            
